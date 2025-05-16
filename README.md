@@ -46,8 +46,8 @@ For UTabMWP, we create unanswerable questions using the following strategy:
 
 The UGeoQA dataset is available at datasets/UTabMWP1.zip and datasets/UTabMWP2.zip. After extraction, you will find 200 subdirectories. Each subdirectory contains a JSON file with questions and options. If the corresponding image for the question is n.png, the question will be answerable. If the corresponding image is n_u1.png, the question will be unanswerable.
 
-## Huggingface
-TUBench is also available at huggingface: https://huggingface.co/datasets/He-Xingwei/TUBench.
+## Hugging Face
+TUBench is also available at Hugging Face: https://huggingface.co/datasets/He-Xingwei/TUBench.
 
 ## Requirements
 pip install pillow  
