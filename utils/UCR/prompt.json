@@ -1,0 +1,11 @@
+{
+    "user_prompt":   "##question## Please analyze the given image and question step by step. If you find the question does not have a deterministic answer, please answer \"Unanswerable\". If it does, answer either \"Yes\" or \"No\". Give your answer first and then output the explanation.",
+    "user_prompt_order2":   "##question## Please analyze the given image and question step by step. If you find the question does not have a deterministic answer, please answer \"Unanswerable\". If it does, answer either \"No\" or \"Yes\". Give your answer first and then output the explanation.",
+    "user_prompt_order3":   "##question## Please analyze the given image and question step by step. If you find the question has a deterministic answer, please answer either \"Yes\" or \"No\". If it does not, answer \"Unanswerable\". Give your answer first and then output the explanation.",
+    "user_prompt2":  "Please analyze the given image and question step by step. If you find the question does not have a deterministic answer, please answer \"Unanswerable\". If it does, answer either \"Yes\" or \"No\". Give your answer first and then output the explanation.\n\nQ: ##question##\nA: ",
+    "user_prompt3":  "Please analyze the given image and question step by step. If you find the question does not have a deterministic answer, please answer \"Unanswerable\". If it does, answer either \"Yes\" or \"No\". Your answer should be  \"Unanswerable\",  \"Yes\" or \"No\". Give your answer first and then output the explanation. The input and output should adhere to the following format:\nQ: your question.\nA: Unanswerable, Yes or No\nE: Your explanation.\n\nQ: ##question##\nA: ",
+    "second_user_prompt": "Please directly output your answer; your answer should be Unanswerable, Yes, or No.",
+    "llm_prompt": "##question## Please analyze the given question step by step. If you find the question does not have a deterministic answer, please answer \"Unanswerable\". If it does, answer either \"Yes\" or \"No\". Give your answer first and then output the explanation."
+
+}
+

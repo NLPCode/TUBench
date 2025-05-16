@@ -1,0 +1,6 @@
+{
+    "user_prompt":   "##question## Answer Choices: ##choices##. Please analyze the given image and question step by step. If you find that the given question and image lack the information necessary to answer the question, please answer \"Unanswerable\". If the question and image contain the information needed to answer the question, select your answer from the answer choices. Give your answer first and then output the explanation.",
+    "user_prompt2":  "##question## 答案选项: ##choices##. 请逐步分析给定的图像和问题。如果你发现给定的问题和图像缺乏回答问题所需的信息，请回答\"Unanswerable\"。如果问题和图像包含回答问题所需的信息，请从答案选项中选择您的答案。请先给出答案，然后输出解释。",
+    "llm_prompt": "##question## Answer Choices: ##choices##. Please analyze the given question step by step. If you find that the question lacks sufficient information to be answered, please answer \"Unanswerable\". Otherwise, select your answer from the answer choices. Give your answer first and then output the explanation."
+
+}
