@@ -50,23 +50,38 @@ The UGeoQA dataset is available at datasets/UTabMWP1.zip and datasets/UTabMWP2.z
 TUBench is also available at huggingface: https://huggingface.co/datasets/He-Xingwei/TUBench.
 
 ## Requirements
-pip install pillow
-pip install -q -U google-generativeai
-pip install transformers==4.42.3
-pip install dashscope
-pip install protobuf
-pip install -U bitsandbytes
-pip install icecream
-pip install nltk
+pip install pillow  
+pip install -q -U google-generativeai   
+pip install transformers==4.42.3   
+pip install dashscope 
+pip install protobuf   
+pip install -U bitsandbytes  
+pip install icecream  
+pip install nltk  
 
 ## Evaluate VLMs on TUBench
-Take the open-source VLM Bunny for example:
+Download the data from the datasets, then extract them, and merge the contents of UTabMWP1 and UTabMWP2 into the UTabMWP directory.
+
+Next, we will use the open-source model Bunny as an example to evaluate its performance on TUBench:
+
+### Prediction
 ```bash
-cd vllms
-for dataset in code_reasoning  geoqa  mscoco tabmwp
+cd vlms
+for dataset in UCR UVQA UTabMWP UGeoQA
 do
 	python bunny.py --dataset $dataset --model Bunny-v1_0-4B
 done
 ```
 
+After running the above code, we will obtain the model's prediction results on the four datasets. Next, we will evaluate the model's prediction performance.
 
+### Evaluation
+
+```bash
+python evaluate.py --dataset UCR --filename ${prediction_filename}
+python evaluate.py --dataset UVQA --filename ${prediction_filename}
+python evaluate_UTabMWP.py --dataset UTabMWP --filename ${prediction_filename}
+python evaluate_UGeoQA.py --dataset UGeoQA --filename ${prediction_filename}
+
+
+```
