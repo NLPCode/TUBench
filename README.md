@@ -4,34 +4,34 @@ Large Vision-Language Models (LVLMs) have achieved remarkable progress on visual
 
 TUBench includes four distinct datasets: unanswerable code reasoning (UCR), unanswerable VQA (UVQA), unanswerable GeoQA (UGeoQA), and unanswerable TabMWP (UTabMWP). Among these, UCR and UVQA are entirely new datasets created by us with answers to questions restricted to 'Yes', 'No', or 'Unanswerable'. UGeoQA and UTabMWP are extensions of GeoQA and TabMWP, respectively, with unanswerable questions added.
 
-## Unanswerable Code Reasoning (UCR)
-For UCR, we create unanswerable questions using the following three strategies:
-- S.1. Introduce uncertainties into code screenshots by adding random functions.
-- S.2. Introduce uncertainties into code screenshots by omitting variable initialization.
-- S.3. Introduce uncertainties into code screenshots by deliberately leaving certain lines of code incomplete.
-The UCR dataset is available at 
 
-<img src="./images/ucr.png" width="100%" height="100%">
-
-The UCR dataset is available at datasets/UCR.zip. After extraction, we obtain 20 subdirectories. In each subdirectory, n.png contains the original code snippet, while n.txt includes the corresponding answerable questions designed for that image. Similarly, n_u1.png and n_u1.txt represent the images and questions constructed using strategy S.1; n_u2.png and n_u2.txt are for strategy S.2; and n_u3.png and n_u3.txt are for strategy S.3.
 
 ## Unanswerable Visual Question Answering (UVQA)
 For UVQA, we create unanswerable questions using the following five strategies:
 
-- S.4. The information required to answer the question is occluded in the image.
-- S.5. The details necessary to answer the question are hard or impossible to discern.
-- S.6. The required information is out of the picture frame.
-- S.7. The spatial relationship is indeterminate.
-- S.8. The required information is not indicated in the image.
+- S.1. The information required to answer the question is occluded in the image.
+- S.2. The details necessary to answer the question are hard or impossible to discern.
+- S.3. The required information is out of the picture frame.
+- S.4. The spatial relationship is indeterminate.
 
 <img src="./images/uvqa.png" width="100%" height="100%">
 
-The UVQA dataset is available at datasets/UVQA.zip. After extraction, you will find 107 subdirectories. Each subdirectory contains an image and a corresponding text file, which includes both answerable and unanswerable questions designed for that image. Each line in the text file includes the question number, the question, the answer, and the strategy used to construct the unanswerable question (1, 2, 3, 4, and 5 correspond to S.4, S.5, S.6, S.7, and S.8).
+The UVQA dataset is available at datasets/UVQA.zip. After extraction, you will find 107 subdirectories. Each subdirectory contains an image and a corresponding text file, which includes both answerable and unanswerable questions designed for that image. Each line in the text file includes the question number, the question, the answer, and the strategy used to construct the unanswerable question (1, 2, 3, and 4correspond to S.1, S.2, S.3, and S.4).
 
+## Unanswerable Code Reasoning (UCR)
+For UCR, we create unanswerable questions using the following three strategies:
+- S.5. Introduce uncertainties into code screenshots by adding random functions.
+- S.6. Introduce uncertainties into code screenshots by omitting variable initialization.
+- S.7. Introduce uncertainties into code screenshots by deliberately leaving certain lines of code incomplete.
+The UCR dataset is available at 
+
+<img src="./images/ucr.png" width="100%" height="100%">
+
+The UCR dataset is available at datasets/UCR.zip. After extraction, we obtain 20 subdirectories. In each subdirectory, n.png contains the original code snippet, while n.txt includes the corresponding answerable questions designed for that image. Similarly, n_u1.png and n_u1.txt represent the images and questions constructed using strategy S.5; n_u2.png and n_u2.txt are for strategy S.6; and n_u3.png and n_u3.txt are for strategy S.7.
 
 ## Unanswerable GeoQA (UGeoQA)
 For UGeoQA, we create unanswerable questions using the following strategy:
-- S.9. To construct an unanswerable question, we deliberately remove a condition from the answerable question.
+- S.8. To construct an unanswerable question, we deliberately remove a condition from the answerable question.
 
 <img src="./images/ugeoqa.png" width="100%" height="100%">
 
@@ -39,8 +39,13 @@ The UGeoQA dataset is available at datasets/UGeoQA.zip. After extraction, you wi
 
 ## Unanswerable UTabMWP (UTabMWP)
 For UTabMWP, we create unanswerable questions using the following strategy:
-- S.10. To render the original question unanswerable, we deliberately occlude crucial information in the left image, thus creating the altered image displayed on the right.
+- S.9. To render the original question unanswerable, we deliberately occlude crucial information in the left image, thus creating the altered image displayed on the right.
 
 <img src="./images/utabmwp.png" width="100%" height="100%">
 
 The UGeoQA dataset is available at datasets/UTabMWP1.zip and datasets/UTabMWP2.zip. After extraction, you will find 200 subdirectories. Each subdirectory contains a JSON file with questions and options. If the corresponding image for the question is n.png, the question will be answerable. If the corresponding image is n_u1.png, the question will be unanswerable.
+
+## Huggingface
+TUBench is also available at huggingface: https://huggingface.co/datasets/He-Xingwei/TUBench.
+
+## Evaluation
