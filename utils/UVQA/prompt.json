@@ -1,0 +1,9 @@
+{
+    "user_prompt":   "##question## Please analyze the given image and question step by step. If you find that the given image lacks the information necessary to answer the question, please answer \"Unanswerable\". If the image contains the information needed to answer the question, answer either \"Yes\" or \"No\". Give your answer first and then output the explanation.",
+    "user_prompt_order2":   "##question## Please analyze the given image and question step by step. If you find that the given image lacks the information necessary to answer the question, please answer \"Unanswerable\". If the image contains the information needed to answer the question, answer either  \"No\" or \"Yes\". Give your answer first and then output the explanation.",
+    "user_prompt_order3":   "##question## Please analyze the given image and question step by step. If the image contains the information needed to answer the question, answer either \"Yes\" or \"No\". If you find that the given image lacks the information necessary to answer the question, please answer \"Unanswerable\". Give your answer first and then output the explanation.",
+    "llm_prompt": "##question## Please analyze the given question step by step. If you find that the question lacks sufficient information to be answered, please answer \"Unanswerable\". Otherwise, answer either \"Yes\" or \"No\". Give your answer first and then output the explanation."
+}
+
+
+
